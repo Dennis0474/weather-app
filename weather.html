@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Weather APP</title>
+    <link rel="stylesheet" href="weather.css" />
+  </head>
+  <body>
+    <form id="weather-form">
+      <input type="text" id="location" placeholder="Enter location" />
+
+      <button type="submit">Get Weather</button>
+    </form>
+
+    <button id="toggle-unit">Toggle °C / °F</button>
+
+    <p id="status"></p>
+
+    <div id="weather"></div>
+
+    <div id="weather-icon"></div>
+
+    <img id="weather-gif" />
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>

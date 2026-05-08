@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  background-image: url(https://media.istockphoto.com/id/2207156080/photo/storm-martinho-2025-cloud-map-western-europe-3d-render-color.jpg?s=1024x1024&w=is&k=20&c=UErjWnmoXIjt3xBkK3rb6B8t41rv_2o1J_mGDoTtTzw=);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-color 0.5s ease;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 0;
+}
+
+body > * {
+  position: relative;
+  z-index: 1;
+}
+
+#weather-form {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#location {
+  width: 260px;
+  padding: 0.9rem 1rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  outline: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+#location:focus {
+  transform: scale(1.02);
+}
+
+button {
+  padding: 0.9rem 1.2rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  transition: transform 0.2s ease,
+  opacity 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+#location:focus,
+button:focus {
+  outline: 2px solid white;
+  outline-offset: 2px;
+}
+
+#status {
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+}
+
+#weather {
+  background: rgba(255, 255,255, 0.2);
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  color: white;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+from {
+  opacity: 0;
+  transform: translateY(10px)
+}
+to {
+  opacity: 1;
+  transform: translateY(0);
+}
+}
+
+#weather h2 {
+margin-bottom: 1rem;
+font-size: 2rem;
+}
+
+#weather p {
+  margin: 0.6rem 0;
+  font-size: 1.2rem;
+}
+
+#weather-icon {
+  font-size: 5rem;
+}
+
+#weather-gif {
+  max-width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+#weather-gif:hover {
+  transform: scale(1.02);
+}
+
+#weather,
+#weather-gif {
+  width: min(320px, 100%);
+}
+
+@media (max-width: 500px) {
+  #weather-form button {
+    width: 100%;
+  }
+
+  #location {
+    width: 100%;
+  }
+
+  #weather-form {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+}
+
