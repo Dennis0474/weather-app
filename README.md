@@ -28,3 +28,6 @@ it with matching themes, icons, and animated GIFs.
 
 ## Live Demo
 [View Live Demo](https://Dennis0474.github.io/weather-app/)
+
+## 📫 Contact
+- Email: dennisegheosaomoyibo@gmail.com
